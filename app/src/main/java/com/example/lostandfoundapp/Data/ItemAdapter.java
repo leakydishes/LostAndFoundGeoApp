@@ -39,13 +39,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
         holder.phone.setText((String.valueOf(item.get(position).getPhone())));
         holder.detail.setText((String.valueOf(item.get(position).getDetail())));
 
-//        holder.post.setText(item.get(position).getPost());
-//        holder.date.setText(item.get(position).getDate());
-//        holder.location.setText(item.get(position).getLocation());
-//        holder.name.setText(item.get(position).getName());
-//        holder.phone.setText(item.get(position).getPhone());
-//        holder.detail.setText(item.get(position).getDetail());
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
