@@ -14,7 +14,7 @@ import com.example.lostandfoundapp.R;
 public class MainActivity extends AppCompatActivity {
 
     // variables
-    Button BtnNewAdvert, BtnShowFound;
+    Button BtnNewAdvert, BtnShowFound, btnShowMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
         // set to screen
         BtnNewAdvert = findViewById(R.id.BtnNewAdvert);
         BtnShowFound = findViewById(R.id.BtnShowFound);
+        btnShowMap = findViewById(R.id.btnShowMap);
 
+        // open new advert
         BtnNewAdvert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,10 +35,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // show list of all items
         BtnShowFound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i =new Intent(MainActivity.this,LostFoundItemsActivity.class);
+                startActivity(i);
+            }
+        });
+
+        // show map view
+        btnShowMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =new Intent(MainActivity.this,ShowMapActivity.class);
                 startActivity(i);
             }
         });

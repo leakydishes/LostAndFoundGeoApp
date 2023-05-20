@@ -30,5 +30,4 @@ public interface ItemDao {
             "date= :date, location =:location where `key`= :key")
     void updateData(String post, String name, String phone, String detail, String date,
                     String location, int key);
-
 }
